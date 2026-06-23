@@ -3,7 +3,9 @@ import { DM_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
+import StickyMobileBar from "@/components/StickyMobileBar";
 import { business } from "@/lib/business";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -12,10 +14,12 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3020"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${business.name} – ${business.tagline}`,
+    default: `${business.name} – ${business.tagline} | ${business.rating}★`,
     template: `%s | ${business.name}`,
   },
   description: business.description,
@@ -24,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "sv_SE",
-    url: "http://localhost:3020",
+    url: siteUrl,
     siteName: business.name,
     title: `${business.name} – ${business.tagline}`,
     description: business.description,
@@ -34,20 +38,11 @@ export const metadata: Metadata = {
     title: `${business.name} – ${business.tagline}`,
     description: business.description,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "http://localhost:3020",
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="sv" className={`${dmSans.variable} h-full`}>
       <head>
@@ -57,6 +52,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <StickyMobileBar />
       </body>
     </html>
   );

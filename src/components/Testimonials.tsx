@@ -7,7 +7,7 @@ export default function Testimonials() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Vad våra kunder säger</h2>
           <p className="mt-4 text-amber-100/80">
-            Utdrag från offentliga kundrecensioner (parafraserade).
+            Utdrag från verifierade kundrecensioner på Bokadirekt.
           </p>
         </div>
 

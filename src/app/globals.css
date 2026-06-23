@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #3d2914;
-  --primary: #5c4033;
-  --secondary: #c9a227;
-  --accent: #faf7f2;
-  --dark: #3d2914;
+  --background: #FFF9E6;
+  --foreground: #F4A261;
+  --primary: #F4A261;
+  --secondary: #FFD166;
+  --accent: #FFF9E6;
+  --dark: #E76F51;
 }
 
 @theme inline {
@@ -26,6 +26,12 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--secondary);
   outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 4.5rem;
+  }
 }

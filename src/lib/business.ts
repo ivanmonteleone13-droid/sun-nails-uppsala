@@ -1,26 +1,26 @@
 export const business = {
   name: "Sun Nails Uppsala",
-  tagline: "Central nail salon on Vaksalagatan",
-  description: "High-traffic central nail salon offering acrylic, gel, manicure, and pedicure daily.",
-  category: "Beauty",
+  tagline: "Central nagelstudio på Vaksalagatan i Uppsala",
+  description: "Sun Nails Uppsala på Vaksalagatan 30 — Uppsalas soliga nagelstudio med akryl, gel, manikyr och pedikyr dagligen. 819 recensioner och centralt läge vid Vaksala torg.",
+  category: "Nagelstudio",
   address: {
     street: "Vaksalagatan 30",
     postalCode: "753 31",
     city: "Uppsala",
     country: "Sverige",
   },
-  phone: "072-866 88 00",
-  phoneLink: "tel:+46728668800",
-  email: "sunnailsuppsala@gmail.com",
-  emailLink: "mailto:sunnailsuppsala@gmail.com",
+  phone: "072-866 88 68",
+  phoneLink: "tel:+46728668868",
+  email: "sunnailsuppsala68@gmail.com" as string | null,
+  emailLink: "mailto:sunnailsuppsala68@gmail.com" as string | null,
   bookingUrl: "https://www.bokadirekt.se/places/sun-nails-uppsala-50236",
   bookingLabel: "Boka på Bokadirekt",
   facebookUrl: null as string | null,
-  instagramUrl: null as string | null,
+  instagramUrl: "https://www.instagram.com/sun_nail_uppsala" as string | null,
   owner: "Sun Nails Uppsala",
   rating: 4.4,
-  reviewCount: 818,
-  foundedYear: null as number | null,
+  reviewCount: 819,
+  foundedYear: 2014,
   coordinates: { lat: 59.8588, lng: 17.6386 },
   hours: {
     note: "Ring gärna innan besök.",
@@ -34,29 +34,44 @@ export const business = {
       { day: "Söndag", hours: "Stängt" },
     ],
   },
+  trustBadges: [
+    { label: "4,4 på Bokadirekt", icon: "star" },
+    { label: "819+ verifierade omdömen", icon: "reviews" },
+    { label: "Centralt Vaksalagatan", icon: "location" },
+    { label: "Öppet dagligen", icon: "student" },
+  ],
   usps: [
     {
-      title: "Certifierad behandling",
-      description: "Skönhetsbehandlingar med omsorg hos Sun Nails Uppsala.",
+      title: "819+ recensioner",
+      description: "En av Uppsalas mest populära nagelstudios — erfarenhet som syns.",
     },
     {
-      title: "Personlig service",
-      description: "Varje besök anpassas efter dina önskemål.",
+      title: "Vaksala torg-läge",
+      description: "Centralt på Vaksalagatan — enkelt att nå från hela stan.",
     },
     {
-      title: "Populärt val",
-      description: "Starkt betyg med 818 recensioner.",
+      title: "Daglig drop-in",
+      description: "Öppet dagligen med möjlighet till drop-in vid lediga tider.",
     },
     {
-      title: "Bekvämt läge",
-      description: "Finns på Vaksalagatan 30 i Uppsala.",
+      title: "Akryl & gel",
+      description: "Brett utbud — akryl, gel, manikyr, pedikyr och fransk design.",
+    },
+    {
+      title: "Snabb service",
+      description: "Effektivt team som hanterar hög genomströmning utan att tumma på kvalitet.",
+    },
+    {
+      title: "Mejla oss",
+      description: "Frågor? sunnailsuppsala68@gmail.com — vi svarar snabbt.",
     },
   ],
   services: [
     {
       id: "akrylnaglar",
       name: "Akrylnaglar",
-      description: "Professionell akrylnaglar med fokus på kvalitet och kundnöjdhet.",
+      icon: "☀️",
+      description: "Akrylnaglar hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
       priceFrom: null,
       note: "Kontakta oss för aktuella priser.",
@@ -64,7 +79,8 @@ export const business = {
     {
       id: "gel-naglar",
       name: "Gelénaglar",
-      description: "Professionell gelénaglar med fokus på kvalitet och kundnöjdhet.",
+      icon: "💅",
+      description: "Gelénaglar hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
       priceFrom: null,
       note: "Kontakta oss för aktuella priser.",
@@ -72,7 +88,8 @@ export const business = {
     {
       id: "manikyr-med-gellack",
       name: "Manikyr med gellack",
-      description: "Professionell manikyr med gellack med fokus på kvalitet och kundnöjdhet.",
+      icon: "🦶",
+      description: "Manikyr med gellack hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
       priceFrom: null,
       note: "Kontakta oss för aktuella priser.",
@@ -80,7 +97,8 @@ export const business = {
     {
       id: "pedikyr",
       name: "Pedikyr",
-      description: "Professionell pedikyr med fokus på kvalitet och kundnöjdhet.",
+      icon: "✨",
+      description: "Pedikyr hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
       priceFrom: null,
       note: "Kontakta oss för aktuella priser.",
@@ -88,24 +106,101 @@ export const business = {
     {
       id: "fransk-design",
       name: "Fransk design",
-      description: "Professionell fransk design med fokus på kvalitet och kundnöjdhet.",
+      icon: "🎨",
+      description: "Fransk design hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
       priceFrom: null,
       note: "Kontakta oss för aktuella priser.",
     },
   ],
+  heroImage: "/images/hero.jpg",
+  aboutImage: "/images/gallery-1.jpg",
+  gallery: [
+    { id: 1, label: "Akryl set", image: "/images/gallery-1.jpg" },
+    { id: 2, label: "Gel manikyr", image: "/images/gallery-2.jpg" },
+    { id: 3, label: "Fransk design", image: "/images/gallery-3.jpg" },
+    { id: 4, label: "Pedikyr", image: "/images/gallery-4.jpg" },
+    { id: 5, label: "Sommarfärger", image: "/images/gallery-5.jpg" },
+    { id: 6, label: "Glitter accent", image: "/images/gallery-6.jpg" },
+  ],
   testimonials: [
     {
-      text: "Fantastisk upplevelse hos Sun Nails Uppsala. Personalen var professionell och resultatet överträffade förväntningarna.",
-      author: "Kundrecension",
-      source: "Offentligt omdöme, parafraserat",
+      text: "Snabbt och fint fixat🌸",
+      author: "Monica F.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/sun-nails-uppsala-50236",
       rating: 5,
+      date: "2026-06-18",
     },
     {
-      text: "Rekommenderar Sun Nails Uppsala varmt. Snabb service, trevligt bemötande och bra kvalitet till rimligt pris.",
-      author: "Kundrecension",
-      source: "Offentligt omdöme, parafraserat",
+      text: "Jag ville ha korta naglar och det vart så snyggt presis som jag hadde önskat och svart nagellack. Han( vet ej vad han heter)som gjorde mina akryl naglar vart jag så nöjd med.",
+      author: "line a.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/sun-nails-uppsala-50236",
       rating: 5,
+      date: "2026-06-05",
+    },
+    {
+      text: "Trevlig personal, fick precis det jag frågade om.  Väldigt nöjd!",
+      author: "Zuzanna S.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/sun-nails-uppsala-50236",
+      rating: 5,
+      date: "2026-05-30",
+    },
+    {
+      text: "Ej nöjd med nya personalen",
+      author: "Izabell S.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/sun-nails-uppsala-50236",
+      rating: 2,
+      date: "2026-05-26",
+    },
+  ],
+  about: {
+    headline: "Uppsalas soligaste nagelstudio",
+    paragraphs: [
+      "Sun Nails Uppsala ligger på Vaksalagatan 30, ett stenkast från Vaksala torg. Studion erbjuder akrylnaglar, gelénaglar, manikyr med gellack, pedikyr och fransk design — öppet dagligen.",
+      "Med imponerande 819 recensioner är Sun Nails en av Uppsalas mest besökta nagelstudios. Boka via Bokadirekt eller maila sunnailsuppsala68@gmail.com.",
+      "Välkommen in för naglar som lyser lika bright som namnet!",
+    ],
+  },
+  faq: [
+    {
+      question: "Var ligger Sun Nails Uppsala?",
+      answer: "Vi finns på Vaksalagatan 30, 753 31 Uppsala. Enkelt att hitta — se karta på vår kontaktsida.",
+    },
+    {
+      question: "Hur bokar jag tid hos Sun Nails Uppsala?",
+      answer: "Enklast bokar du via Bokadirekt på vår profilsida. Du kan också ringa 072-866 88 68 för personlig hjälp.",
+    },
+    {
+      question: "Vad säger andra kunder om Sun Nails Uppsala?",
+      answer: "Vi har 4.4 i snittbetyg baserat på 819+ recensioner på Bokadirekt — ett förtroende vi värnar om.",
+    },
+    {
+      question: "Vilka öppettider har ni?",
+      answer: "Se aktuella öppettider på Bokadirekt eller kontaktsidan. Vi rekommenderar att boka tid i förväg.",
+    },
+    {
+      question: "Kan jag avboka eller omboka min tid?",
+      answer: "Ja, via Bokadirekt kan du hantera din bokning. Kontakta oss vid frågor så hjälper vi dig.",
+    },
+    {
+      question: "Hur länge håller gelénaglar?",
+      answer: "Gelénaglar håller normalt 2–3 veckor utan att chip:a. Påfyllning rekommenderas var 2–3:e vecka.",
+    },
+    {
+      question: "Vad kostar nagelförlängning?",
+      answer: "Priset varierar beroende på metod (gel/akryl) och design. Se Bokadirekt för aktuella priser eller ring oss.",
+    },
+    {
+      question: "Kan jag ta med egen design?",
+      answer: "Absolut! Visa en bild eller beskriv din idé så anpassar vi designen efter dina önskemål.",
+    },
+    {
+      question: "Skadar nagelförlängning den naturliga nageln?",
+      answer: "Med korrekt applicering och skonsam borttagning påverkas den naturliga nageln minimalt. Vi prioriterar nagelns hälsa.",
     },
   ],
   seoKeywords: [
@@ -113,12 +208,14 @@ export const business = {
     "manikyr Uppsala centrum",
     "akrylnaglar Uppsala",
     "pedikyr Uppsala",
+    "Sun Nails Uppsala",
+    "manikyr centrum",
   ],
   brandColors: {
-    primary: "#8b4a6b",
-    secondary: "#e8b4bc",
-    accent: "#fdf6f8",
-    dark: "#5c2d42",
+    primary: "#F4A261",
+    secondary: "#FFD166",
+    accent: "#FFF9E6",
+    dark: "#E76F51",
   },
 } as const;
 
@@ -135,4 +232,9 @@ export function getMapsEmbedUrl() {
 export function getMapsLink() {
   const query = encodeURIComponent(getFullAddress());
   return `https://www.google.com/maps/search/?api=1&query=${query}`;
+}
+
+export function formatPrice(amount: number | null) {
+  if (amount === null) return "Pris på förfrågan";
+  return `från ${amount} kr`;
 }
