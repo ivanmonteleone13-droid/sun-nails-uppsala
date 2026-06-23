@@ -91,7 +91,7 @@ export const business = {
       icon: "🦶",
       description: "Manikyr med gellack hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
-      priceFrom: null,
+      priceFrom: 850,
       note: "Kontakta oss för aktuella priser.",
     },
     {
@@ -100,7 +100,7 @@ export const business = {
       icon: "✨",
       description: "Pedikyr hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
-      priceFrom: null,
+      priceFrom: 400,
       note: "Kontakta oss för aktuella priser.",
     },
     {
@@ -109,10 +109,11 @@ export const business = {
       icon: "🎨",
       description: "Fransk design hos Sun Nails Uppsala — noggrant utfört med premiumprodukter och personlig service.",
       duration: "30–90 min",
-      priceFrom: null,
+      priceFrom: 600,
       note: "Kontakta oss för aktuella priser.",
     },
   ],
+  logoImage: "/images/logo.jpg" as string | null,
   heroImage: "/images/hero.jpg",
   aboutImage: "/images/gallery-1.jpg",
   gallery: [
