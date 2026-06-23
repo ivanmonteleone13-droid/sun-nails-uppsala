@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { business } from "@/lib/business";
+import BusinessLogo from "@/components/BusinessLogo";
 
 const navLinks = [
   { href: "/", label: "Hem" },
@@ -23,16 +24,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-[#5C4033]/10 bg-[#FAF7F2]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
-          {"logoImage" in business && business.logoImage ? (
-            <img src={business.logoImage as string} alt="" className="h-10 w-10 rounded-full object-contain bg-white p-1" />
-          ) : (
-          <span
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5C4033] text-lg text-white shadow-md transition group-hover:bg-[#3D2914]"
-            aria-hidden
-          >
-            💅
-          </span>
-          )}
+          <BusinessLogo />
           <div>
             <p className="text-lg font-bold tracking-tight text-[#3D2914]">
               {business.name}
